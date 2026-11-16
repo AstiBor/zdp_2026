@@ -306,8 +306,11 @@ var XF=[["Масло ГХИ (топлёное)",900,0.3,99.5,0,10,11],["Масл
 XF.forEach(function(a,i){if(!a)return;FOODS.push({id:"x"+String(i+1).padStart(3,"0"),n:a[0],k:a[1],p:a[2],f:a[3],c:a[4],g:a[5],b:true,t:a[6]})});
 var YF=[["Кижуч сырой",140,21,6,0,150,1],["Кижуч запечённый",170,26,7,0,150,1],["Кижуч жареный",195,25,10,0,150,1],["Кижуч слабосолёный",190,22,11,0,50,1],["Нерка сырая",157,21,8,0,150,1],["Нерка запечённая",190,26,9.5,0,150,1],["Нерка слабосолёная",205,23,12,0,50,1],["Чавыча сырая",180,20,11,0,150,1],["Чавыча запечённая",230,26,14,0,150,1],["Кета запечённая",150,24,6,0,150,1],["Кета слабосолёная",184,22,10.5,0,50,1],["Кета варёная",140,24,5,0,150,1],["Кета горячего копчения",190,26,9,0,80,1],["Горбуша слабосолёная",169,21,9,0,50,1],["Горбуша консервированная в собственном соку",136,20.5,6,0,100,1],["Горбуша горячего копчения",175,25,8,0,80,1],["Сёмга жареная",230,24,15,0,150,1],["Сёмга холодного копчения",180,22,10,0,50,1],["Форель радужная сырая",141,20,6.2,0,150,1],["Форель слабосолёная",190,21,11,0,50,1],["Форель жареная",190,24,10,0,150,1],["Икра кеты",251,31,13.5,1,20,1],["Икра горбуши",250,31,13,1,20,1],["Икра нерки",250,30,14,1,20,1],["Икра минтая",130,26,2,1.5,20,1],["Камбала запечённая",120,21,3.5,0,150,1],["Камбала жареная",150,20,7,3,150,1],["Палтус запечённый",140,23,5,0,150,1],["Навага варёная",90,18,1.5,0,150,1],["Треска сырая",78,17.7,0.7,0,150,1],["Треска варёная",78,17.7,0.7,0,150,1],["Треска жареная",160,20,8,2,150,1],["Минтай сырой",72,16,0.9,0,150,1],["Минтай жареный",130,16,6,3,150,1],["Пикша запечённая",112,24,1,0,150,1],["Сом запечённый",140,17,8,0,150,1],["Карп жареный",196,18,12,2,150,1],["Щука запечённая",110,22,2,0,150,1],["Окунь морской запечённый",120,20,4,0,150,1],["Окунь речной варёный",100,20,2,0,150,1],["Лещ запечённый",120,20,4,0,150,1],["Хариус запечённый",120,22,3.5,0,150,1],["Сиг запечённый",144,19,7,0,150,1],["Корюшка жареная",160,17,8,3,100,1],["Мойва жареная",180,18,11,2,100,1],["Килька в томатном соусе",125,13,7,3,100,1],["Скумбрия горячего копчения",220,24,14,0,100,1],["Скумбрия холодного копчения",221,24,14,0,100,1],["Сельдь маринованная",180,15,12,4,80,1],["Сельдь в масле",280,15,24,0,80,1],["Сельдь солёная",217,17.7,15.1,0,80,1],["Сардины в масле консервированные",210,24,12,0,80,1],["Тунец стейк жареный",150,29,3,0,150,1],["Ставрида запечённая",120,20,4.5,0,150,1],["Угорь копчёный",360,18,32,0,80,1],["Креветки сырые",85,20,0.5,0,100,1],["Креветки тигровые варёные",99,22,1,0,100,1],["Гребешок морской варёный",90,17,0.8,3,100,1],["Краб камчатский консервированный",73,16,0.6,0.5,100,1],["Кальмар сырой",75,18,0.3,0,150,1],["Кальмар жареный",150,17,7,4,150,1],["Рыбные палочки в панировке",220,11,10,22,100,1],["Рыба в кляре",230,15,14,12,150,1],["Уха из красной рыбы",45,5,2,1.5,300,1],["Ролл «Калифорния»",190,6,6,28,40,1],["Сельдь «под шубой»",190,5,13,12,150,1]];
 YF.forEach(function(a,i){FOODS.push({id:"y"+String(i+1).padStart(3,"0"),n:a[0],k:a[1],p:a[2],f:a[3],c:a[4],g:a[5],b:true,t:a[6]})});
+var ZF=[["Куриное бедро с кожей сырое",211,17.3,15.5,0,150,0],["Куриное бедро без кожи сырое",119,19.7,4.1,0,150,0],["Куриные голени сырые",161,18,9.5,0,150,0],["Куриные крылья сырые",186,19,12,0,150,0],["Куриная печень сырая",119,17.5,4.8,0.7,100,0],["Куриное сердце сырое",159,15.8,10.3,0.8,100,0],["Куриный фарш сырой",143,17.4,8.1,0,100,0],["Индейка, грудка сырая",104,23.7,1,0,150,0],["Индейка, бедро сырое",144,19,7.2,0,150,0],["Фарш индейки сырой",150,19.7,7.5,0,100,0],["Говядина сырая (мякоть)",187,18.9,12.4,0,150,0],["Фарш говяжий сырой",254,17.2,20,0,100,0],["Говяжья печень сырая",127,17.9,3.7,5.3,100,0],["Говяжий язык сырой",173,16,12,0,100,0],["Баранина сырая",209,15.6,16.3,0,150,0],["Кролик сырой",156,21,8,0,150,0],["Утка сырая (с кожей)",337,19,28,0,150,0],["Скумбрия сырая",181,18,13.2,0,150,1],["Сельдь сырая",158,18,9,0,150,1],["Хек сырой",86,16.6,2.2,0,150,1],["Судак сырой",84,18.4,1.1,0,150,1],["Щука сырая",84,18.4,1.1,0,150,1],["Карп сырой",112,18,3.6,0,150,1],["Сом сырой",115,16.4,5.2,0,150,1],["Камбала сырая",83,16,1.8,0,150,1],["Палтус сырой",102,18.6,2.3,0,150,1],["Тунец сырой",110,24,0.5,0,150,1],["Тилапия сырая",96,20,1.7,0,150,1],["Дорадо сырая",105,19,3,0,150,1],["Морской окунь сырой",117,18.2,4.2,0,150,1],["Навага сырая",73,16.1,1,0,150,1],["Пикша сырая",74,17.2,0.3,0,150,1],["Корюшка сырая",98,15.5,3.2,0,100,1],["Мойва сырая",116,13.4,7.1,0,100,1],["Мидии сырые",77,11.5,2,3.3,100,1],["Гребешок морской сырой",69,12.1,0.5,3.2,100,1],["Осьминог сырой",82,14.9,1,2.2,100,1],["Камчатский краб сырой",84,18,0.6,0,100,1],["Форель сырая (кумжа)",141,20,6.2,0,150,1],["Картофель сырой",77,2,0.4,16.3,150,5],["Батат сырой",86,1.6,0.1,20,150,5],["Цветная капуста сырая",25,1.9,0.3,5,100,5],["Брюссельская капуста сырая",43,3.4,0.3,9,100,5],["Шампиньоны сырые",22,3.1,0.3,3.3,100,5],["Вешенки сырые",33,3.3,0.4,6,100,5],["Лисички сырые",32,1.5,0.5,7,100,5],["Белые грибы сырые",34,3.7,1.7,1.1,100,5],["Кукуруза сладкая свежая",86,3.3,1.2,19,150,5],["Горошек зелёный свежий",81,5.4,0.4,14,80,5],["Стручковая фасоль сырая",31,1.8,0.2,7,100,5],["Сельдерей корень сырой",42,1.5,0.3,9.2,50,5],["Пастернак",75,1.2,0.3,18,80,5],["Репа",28,0.9,0.1,6.4,100,5],["Топинамбур",61,2,0.1,13,100,5],["Редька",34,1.9,0.2,6.7,80,5],["Кольраби",27,1.7,0.1,6.2,100,5],["Лук-порей",61,1.5,0.3,14,50,5],["Фенхель",31,1.2,0.2,7.3,100,5],["Патиссон",19,0.6,0.1,4.3,150,5],["Перец чили",40,1.9,0.4,9,10,5],["Рис басмати сухой",351,7.5,0.6,77,60,3],["Рис жасмин сухой",350,7,0.6,78,60,3],["Рис круглозёрный сухой",330,7,1,75,60,3],["Рис пропаренный сухой",350,7,0.6,77,60,3],["Рис дикий сухой",357,14,1,75,60,3],["Рис красный сухой",360,8,2.8,76,60,3],["Кускус сухой",376,12.8,0.6,77,60,3],["Киноа сухая",368,14,6,64,60,3],["Манная крупа сухая",328,10.3,1,70,40,3],["Кукурузная крупа сухая",337,8.3,1.2,75,60,3],["Ячневая крупа сухая",313,10,1.3,66,60,3],["Овсяная крупа сухая",342,12,6,60,60,3],["Гречка зелёная сухая",310,12.6,3.3,57,60,3],["Полба сухая",338,15,2.4,70,60,3],["Пшеничная крупа сухая",329,11.5,1.3,68,60,3],["Лапша яичная сухая",380,12,4,72,60,3],["Лапша рисовая сухая",360,6,0.6,80,60,3],["Лапша соба сухая",340,14,2,71,60,3],["Фунчоза сухая",330,0.2,0.1,83,50,3],["Вермишель сухая",350,11,1.2,72,60,3],["Лапша удон сухая",350,10.5,1,72,70,3],["Мука пшеничная",334,10.3,1,69,30,3],["Мука цельнозерновая",340,13,2.5,64,30,3],["Мука овсяная",369,13,6,65,30,3],["Мука рисовая",366,6,1.4,80,30,3],["Мука миндальная",590,21,50,10,30,3],["Крахмал картофельный",313,0.1,0,78,10,3],["Фасоль красная сухая",298,21,2,47,50,7],["Фасоль белая сухая",295,21,2,47,50,7],["Горох колотый сухой",298,20,2,50,50,7],["Чечевица красная сухая",318,24,1.5,52,50,7],["Соя сухая",446,36,20,30,50,7],["Маш сухой",347,24,1.2,63,50,7],["Лещ сырой",105,17.1,4.1,0,150,1],["Сиг сырой",134,19,6,0,150,1],["Хариус сырой",90,17,2.3,0,150,1],["Окунь речной сырой",82,18.5,0.9,0,150,1],["Ставрида сырая",114,18.5,4.5,0,150,1],["Креветки тигровые сырые",85,20,0.5,0,100,1],["Куриные желудки сырые",94,17,2.1,0,100,0],["Арахис сырой",567,26,49,16,30,7]];
+ZF.forEach(function(a,i){FOODS.push({id:"z"+String(i+1).padStart(3,"0"),n:a[0],k:a[1],p:a[2],f:a[3],c:a[4],g:a[5],b:true,t:a[6]})});
 var SYN={"Масло топлёное":"гхи ghee ги","Масло ГХИ (топлёное)":"ghee топленое ги","Творог зернёный":"зерненый","Яйцо перепелиное":"перепелиные яйца"};
 var TOKMAP={"картошка":"картофел","картошку":"картофел","картошки":"картофел","курица":"кур","курицу":"кур","курицы":"кур","яйца":"яйц","яичко":"яйц"};
+FOODS.forEach(function(f){if((f.t===3||f.t===7)&&/сух/i.test(f.n)){SYN[f.n]=((SYN[f.n]||"")+" сырой сырая сырые крупа").trim()}});
 FOODS.forEach(function(f){if(f.t!==1)return;var s=SYN[f.n]||"";if(/кижуч|нерк|чавыч|кет[аы]|горбуш|сёмг|семг|форел|лосос/i.test(f.n))s+=" красная рыба лосось";if(/^икра/i.test(f.n))s+=" красная икра";if(!/рыб/i.test(f.n))s+=" рыба";if(s)SYN[f.n]=s.trim()});
 
 function defaults(){return {onb:false,prof:{name:"Зарина",age:32,height:165,weight:60,act:1.375,goal:"muscle",sur:10,prot:1.8,fat:1,adj:0,water:2000,steps:10000,wk:3,rem:true,cs:false,hue:350,phr:""},foods:[],favs:[],recent:[],pantry:[],log:{},water:{},steps:{},weights:[],workouts:{},tpl:[]}}
@@ -538,6 +541,8 @@ function foodListHTML(){
   list.sort(function(a,b){
     var fa=S.favs.indexOf(a.id)>=0?0:1,fb=S.favs.indexOf(b.id)>=0?0:1;
     if(fa!==fb)return fa-fb;
+    var wa=isRaw(a)?0:1,wb=isRaw(b)?0:1;
+    if(wa!==wb)return wa-wb;
     var ra=S.recent.indexOf(a.id),rb=S.recent.indexOf(b.id);
     ra=ra<0?99:ra;rb=rb<0?99:rb;
     if(ra!==rb)return ra-rb;
@@ -556,7 +561,7 @@ function renderSheet(){
   if(!A)return;
   var h='<div class="scrim" data-act="scrim"><div class="sheet" role="dialog" aria-modal="true">';
   h+='<div class="row"><div class="grow"><h2>'+(A.edit?"Изменить запись":esc(mealName(A.m)))+'</h2><div class="small muted">'+esc(dayTitle())+(cur>TODAY?" · план":"")+'</div></div><button class="btn ghost small" data-act="close">Закрыть</button></div>';
-  if(!A.edit&&A.mode!=="amount")h+='<div class="tabs">'+tabBtn("hist","История")+tabBtn("list","Продукты")+tabBtn("voice","Голос")+tabBtn("mine","Своё")+tabBtn("tpl","Шаблоны")+tabBtn("quick","Быстро")+'</div>';
+  if(!A.edit&&A.mode!=="amount")h+='<div class="tabs">'+tabBtn("hist","История")+tabBtn("list","Продукты")+tabBtn("voice","Голос")+tabBtn("web","Онлайн")+tabBtn("mine","Своё")+tabBtn("tpl","Шаблоны")+tabBtn("quick","Быстро")+'</div>';
   if(A.mode==="hist"){
     h+='<div class="chips"><button class="chip" data-act="hf" data-v="recent" aria-pressed="'+(A.hf==="recent")+'">Недавние</button><button class="chip" data-act="hf" data-v="freq" aria-pressed="'+(A.hf==="freq")+'">Частые</button><button class="chip" data-act="hm" aria-pressed="'+A.hm+'">Только «'+esc(mealName(A.m))+'»</button></div><div id="histList">'+histHTML()+'</div>'
   }else if(A.mode==="list"){
@@ -570,6 +575,8 @@ function renderSheet(){
       (f.br?'<div class="small muted">Значения ориентировочные, лучше сверить с упаковкой.</div>':'')+'<label class="field"><span>Вес порции, г</span><input type="number" inputmode="decimal" id="gr" value="'+(A.g||f.g||100)+'" min="0"></label>'+
       '<div class="preview" id="pv"></div>'+
       '<div class="row"><button class="btn grow" data-act="commit">'+(A.edit?"Сохранить":"Добавить в дневник")+'</button>'+(A.edit?"":'<button class="btn ghost" data-act="mode" data-v="'+(A.back||"list")+'">Назад</button>')+'</div>'
+  }else if(A.mode==="web"){
+    h+=webHTML()
   }else if(A.mode==="tpl"){
     h+=tplHTML()
   }else if(A.mode==="mine"){
@@ -598,6 +605,65 @@ function newId(){return Date.now().toString(36)+Math.random().toString(36).slice
 
 
 /* v11 */
+
+/* v12: сырые вперёд, онлайн-поиск */
+var RAWNO=/варен|жарен|запечен|тушен|консерв|солен|квашен|маринов|суш|пюре|сок\b|варень|джем|копчен|изюм|чернослив|курага|финик|инжир|в масле|фри|гриль|паров/;
+function isRaw(f){
+  if(!f.b||f.br)return false;
+  var n=norm(f.n);
+  if(/(^|[\s,])сыр(ой|ая|ое|ые|ого|ую|ых)([\s,]|$)|свеж/.test(n))return true;
+  if(f.t===5||f.t===6)return !RAWNO.test(n);
+  if((f.t===3||f.t===7)&&/(^|\s)сух/.test(n))return true;
+  if(f.t===3&&/^мука|^крахмал/.test(n))return true;
+  return false
+}
+function webHTML(){
+  A.web=A.web||{q:"",res:null,msg:"",busy:false};
+  var w=A.web;
+  var h='<div class="small muted">Поиск по открытой базе Open Food Facts: магазинные продукты и штрихкоды. Нужен интернет. Данные вносят люди, поэтому сверяй с упаковкой.</div>'+
+    '<div class="row"><input type="search" id="wq" placeholder="Название или штрихкод" value="'+esc(w.q)+'" autocomplete="off"><button class="btn small" data-act="wsearch"'+(w.busy?' disabled':'')+'>Найти</button></div><div id="wres">'+webResHTML()+'</div>';
+  return h
+}
+function webResHTML(){
+  var w=A.web;
+  if(w.busy)return '<div class="empty">Ищу…</div>';
+  if(w.msg)return '<div class="empty">'+esc(w.msg)+'</div>';
+  if(!w.res)return '';
+  return w.res.map(function(r,i){return '<div class="food"><button class="pick" data-act="wpick" data-i="'+i+'"><b>'+esc(r.n)+'</b><span class="small muted num">'+r.k+' ккал · Б '+r.p+' · Ж '+r.f+' · У '+r.c+' на 100 г</span></button></div>'}).join("")
+}
+function webParse(pr){
+  if(!pr)return null;
+  var nu=pr.nutriments||{},nm=(pr.product_name_ru||pr.product_name||"").trim();
+  if(!nm)return null;
+  var k=nu["energy-kcal_100g"];
+  if(k===undefined||k===null||k==="")k=nu["energy_100g"]!==undefined?nu["energy_100g"]/4.184:NaN;
+  k=parseFloat(k);if(!isFinite(k)||k<0||k>950)return null;
+  var p=parseFloat(nu.proteins_100g),f=parseFloat(nu.fat_100g),c=parseFloat(nu.carbohydrates_100g);
+  if(!isFinite(p)&&!isFinite(f)&&!isFinite(c))return null;
+  var br=(pr.brands||"").split(",")[0].trim(),sq=parseFloat(pr.serving_quantity);
+  return {oid:String(pr.code||""),n:br&&nm.toLowerCase().indexOf(br.toLowerCase())<0?nm+" ("+br+")":nm,k:r0(k),p:r1(isFinite(p)?p:0),f:r1(isFinite(f)?f:0),c:r1(isFinite(c)?c:0),g:(sq>0&&sq<2000)?r0(sq):100}
+}
+var WTOK=0;
+function webSearch(){
+  if(!A||A.mode!=="web")return;
+  var w=A.web,q=(w.q||"").trim();
+  if(!q){w.msg="Введи название или штрихкод.";w.res=null;$("#wres").innerHTML=webResHTML();return}
+  var bar=/^\d{8,14}$/.test(q),fields="code,product_name,product_name_ru,brands,nutriments,serving_quantity";
+  var url=bar?"https://world.openfoodfacts.org/api/v2/product/"+q+".json?fields="+fields:
+    "https://world.openfoodfacts.org/cgi/search.pl?search_terms="+encodeURIComponent(q)+"&search_simple=1&action=process&json=1&page_size=30&sort_by=unique_scans_n&lc=ru&fields="+fields;
+  var tok=++WTOK;w.busy=true;w.msg="";w.res=null;$("#wres").innerHTML=webResHTML();
+  var ctl=window.AbortController?new AbortController():null,tm=setTimeout(function(){if(ctl)ctl.abort()},12000);
+  fetch(url,ctl?{signal:ctl.signal}:{}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(j){
+    clearTimeout(tm);if(tok!==WTOK||!A||A.mode!=="web")return;
+    var arr=bar?(j&&j.product?[j.product]:[]):(j&&j.products||[]),seen={},out=[];
+    arr.forEach(function(pr){var x=webParse(pr);if(!x)return;var key=x.n.toLowerCase();if(seen[key])return;seen[key]=1;out.push(x)});
+    w.busy=false;w.res=out;w.msg=out.length?"":(bar?"Продукт с таким штрихкодом не найден или в нём нет данных о питательности.":"Ничего не нашлось. Попробуй другое слово, например название на русском без бренда.");
+    $("#wres").innerHTML=webResHTML()
+  }).catch(function(){
+    clearTimeout(tm);if(tok!==WTOK||!A||A.mode!=="web")return;
+    w.busy=false;w.res=null;w.msg="Не получилось подключиться. Проверь интернет и попробуй ещё раз.";$("#wres").innerHTML=webResHTML()
+  })
+}
 var WTYPES=["Силовая","Кардио","Растяжка и йога","Прогулка","Плавание","Другое"];
 function weekSessions(d){var s=weekStart(d),n=0,i;for(i=0;i<7;i++)n+=(S.workouts[addDays(s,i)]||[]).length;return n}
 function workoutHTML(){
@@ -1142,6 +1208,13 @@ document.addEventListener("click",function(ev){
     S.log[rdate].push({id:newId(),m:rmeal,n:rr.n+(RC.x>1?" × "+RC.x:""),k:rm.k,p:rm.p,f:rm.f,c:rm.c});
     save();closeSheet();toast("Добавлено: "+mealName(rmeal).toLowerCase()+", "+dayTitle().toLowerCase());return
   }
+  if(a==="wsearch"){webSearch();return}
+  if(a==="wpick"){
+    var wr=A.web&&A.web.res&&A.web.res[+el.getAttribute("data-i")];if(!wr)return;
+    var ex=wr.oid?S.foods.filter(function(x){return x.oid===wr.oid})[0]:null;
+    if(!ex){ex={id:"u"+newId(),n:wr.n,k:wr.k,p:wr.p,f:wr.f,c:wr.c,g:wr.g,oid:wr.oid};S.foods.push(ex);save()}
+    A.food=ex;A.g=ex.g;A.back="web";A.mode="amount";renderSheet();return
+  }
   if(a==="water-plus"){S.water[cur]=(S.water[cur]||0)+1;save();renderToday();return}
   if(a==="wk-add"){
     var wt=$("#wkType").value,wm=Math.max(0,r0(num($("#wkMin").value,0)));
@@ -1229,6 +1302,7 @@ document.addEventListener("input",function(ev){
   var t=ev.target;
   if(t.id==="q"){A.q=t.value;$("#foodList").innerHTML=foodListHTML();return}
   if(t.id==="gr"){updPreview();return}
+  if(t.id==="wq"){if(A&&A.web)A.web.q=t.value;return}
   if(t.id==="vt"){if(A)A.vtext=t.value;return}
   var vg=t.getAttribute&&t.getAttribute("data-vg");
   if(vg!==null&&vg!==undefined&&A&&A.v[+vg]){A.v[+vg].g=num(t.value,0);updVRow(+vg);return}
@@ -1258,7 +1332,7 @@ document.addEventListener("change",function(ev){
     if(nf){it.food=nf;if(it.spec.m==="pc")it.g=r1(it.spec.v*nf.g);var gi=$('[data-vg="'+vi+'"]');if(gi)gi.value=r0(it.g);updVRow(+vi)}
   }
 });
-document.addEventListener("keydown",function(ev){if(ev.key==="Escape"&&A)closeSheet()});
+document.addEventListener("keydown",function(ev){if(ev.key==="Escape"&&A)closeSheet();if(ev.key==="Enter"&&ev.target&&ev.target.id==="wq"){ev.preventDefault();webSearch()}});
 function applyHue(){document.documentElement.style.setProperty("--h",S.prof.hue)}
 window.addEventListener("hashchange",route);
 document.addEventListener("visibilitychange",function(){
