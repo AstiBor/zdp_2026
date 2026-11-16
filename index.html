@@ -243,6 +243,12 @@ svg.chart text{fill:var(--muted);font-size:10px;font-family:var(--font-body)}
 .stepper button{width:38px;height:38px;border-radius:12px;background:var(--surface2);font-size:20px;font-weight:700}
 ol.steps{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+/* v13: клавиатура и окно добавления */
+input[type=text],input[type=number],input[type=search],select,textarea{font-size:16px}
+html.sheet-open,html.sheet-open body{overscroll-behavior:none}
+body.locked{position:fixed;left:0;right:0;width:100%;overflow:hidden}
+.scrim{inset:auto;left:0;right:0;top:var(--vvt,0px);height:var(--vvh,100%)}
+.sheet{overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
 /* v11: тренировки, напоминания, шаблоны, отчёт */
 .remind{display:flex;gap:10px;align-items:flex-start;padding:12px 14px;border-radius:16px;background:var(--accent-soft);border:1px solid var(--line)}
 .remind .rt{flex:1;min-width:0;font-size:14px}
@@ -1334,6 +1340,33 @@ document.addEventListener("change",function(ev){
 });
 document.addEventListener("keydown",function(ev){if(ev.key==="Escape"&&A)closeSheet();if(ev.key==="Enter"&&ev.target&&ev.target.id==="wq"){ev.preventDefault();webSearch()}});
 function applyHue(){document.documentElement.style.setProperty("--h",S.prof.hue)}
+/* v13: фон не двигается, пока открыто окно; окно подстраивается под клавиатуру */
+(function(){
+  var ov=document.getElementById("overlay"),y=0,locked=false,vv=window.visualViewport;
+  function fit(){
+    var r=document.documentElement.style;
+    if(vv&&locked){r.setProperty("--vvh",vv.height+"px");r.setProperty("--vvt",vv.offsetTop+"px")}
+    else{r.removeProperty("--vvh");r.removeProperty("--vvt")}
+  }
+  function sync(){
+    var open=!!ov.firstChild;
+    if(open&&!locked){
+      y=window.pageYOffset||0;locked=true;
+      document.body.style.top=(-y)+"px";document.body.classList.add("locked");document.documentElement.classList.add("sheet-open")
+    }else if(!open&&locked){
+      locked=false;document.body.classList.remove("locked");document.documentElement.classList.remove("sheet-open");
+      document.body.style.top="";window.scrollTo(0,y)
+    }
+    fit()
+  }
+  new MutationObserver(sync).observe(ov,{childList:true});
+  if(vv){vv.addEventListener("resize",fit);vv.addEventListener("scroll",fit)}
+  document.addEventListener("focusin",function(ev){
+    var t=ev.target;
+    if(!locked||!t||!t.closest||!t.closest(".sheet"))return;
+    setTimeout(function(){try{t.scrollIntoView({block:"center",behavior:"smooth"})}catch(e){}},350)
+  })
+})();
 window.addEventListener("hashchange",route);
 document.addEventListener("visibilitychange",function(){
   if(document.visibilityState!=="visible")return;
